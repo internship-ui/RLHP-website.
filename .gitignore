@@ -1,0 +1,11 @@
+# Nested duplicate folders
+RLHP-Website/
+
+# Logs and runtime artifacts
+*.log
+npm-debug.log*
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
