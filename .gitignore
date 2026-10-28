@@ -1,5 +1,6 @@
 # Nested duplicate folders
 RLHP-Website/
+RLHP-Website-main/
 
 # Logs and runtime artifacts
 *.log
