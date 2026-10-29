@@ -498,7 +498,7 @@
         </div>
 
         <!-- Card 4: Adolescent & Youth -->
-        <div class="program-card">
+        <div class="program-card program-card-extra">
           <div class="prog-img-container">
             <img src="images/hero.jpg" alt="Youth Empowerment" class="prog-img" style="filter: hue-rotate(25deg);">
             <span class="prog-badge"><i class="fa-solid fa-graduation-cap"></i> Life Skills</span>
@@ -517,7 +517,7 @@
         </div>
 
         <!-- Card 5: People's Development & Last-Mile Public Schemes -->
-        <div class="program-card">
+        <div class="program-card program-card-extra">
           <div class="prog-img-container">
             <img src="images/women-empowerment.jpg" alt="People Development" class="prog-img" style="filter: brightness(0.95) contrast(1.1);">
             <span class="prog-badge"><i class="fa-solid fa-landmark-dome"></i> Rights & Schemes</span>
@@ -536,7 +536,7 @@
         </div>
 
         <!-- Card 6: Disaster Relief & Humanitarian Assistance -->
-        <div class="program-card">
+        <div class="program-card program-card-extra">
           <div class="prog-img-container">
             <img src="images/health-camp.jpg" alt="Humanitarian Relief" class="prog-img" style="filter: contrast(1.15);">
             <span class="prog-badge"><i class="fa-solid fa-hand-holding-medical"></i> Relief & Restoration</span>
@@ -555,7 +555,7 @@
         </div>
       
         <!-- Card 7: Natural Resource Management -->
-        <div class="program-card">
+        <div class="program-card program-card-extra">
           <div class="prog-img-container">
             <img src="images/gallery/gram_sabha_awareness.jpg" alt="Natural Resource Management" class="prog-img">
             <span class="prog-badge"><i class="fa-solid fa-leaf"></i> Eco Action</span>
@@ -574,7 +574,7 @@
         </div>
 
         <!-- Card 8: Networking & State-Level Advocacy -->
-        <div class="program-card">
+        <div class="program-card program-card-extra">
           <div class="prog-img-container">
             <img src="images/gallery/child_rights_conference.jpg" alt="Networking & Advocacy" class="prog-img">
             <span class="prog-badge"><i class="fa-solid fa-network-wired"></i> Collective Voice</span>
@@ -591,6 +591,13 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-- View More / View Less Button -->
+      <div id="programmesToggleContainer" style="text-align: center; margin-top: 2.5rem;">
+        <button id="toggleProgrammesBtn" class="btn-newspaper-toggle" onclick="toggleProgrammes()">
+          <span id="toggleProgrammesText">View More</span>
+          <i id="toggleProgrammesIcon" class="fa-solid fa-chevron-down"></i>
+        </button>
       </div>
     </div>
   </section>
@@ -708,108 +715,6 @@
     </div>
   </section>
 
-  <!-- Where We Work & Map Section -->
-  <section class="work-section" id="where-we-work">
-    <div class="container">
-      <div class="work-grid">
-        <div>
-          <div class="section-tag"><i class="fa-solid fa-map-location-dot"></i> Geographical Footprint</div>
-          <h2 class="section-title">Where We Work Across Karnataka</h2>
-          <p class="section-desc">
-            RLHP is actively operating in 4 primary districts with full project offices, and has reached across 8 districts in Southern and Northern Karnataka covering more than 2,15,000+ community members.
-          </p>
-
-          <div class="district-badges-grid">
-            <div class="district-card">
-              <div class="dist-icon"><i class="fa-solid fa-building-flag"></i></div>
-              <div>
-                <div class="dist-name">Mysuru District</div>
-                <div class="dist-role">Head Office, Shelters & Urban Slums</div>
-              </div>
-            </div>
-            <div class="district-card">
-              <div class="dist-icon"><i class="fa-solid fa-tree"></i></div>
-              <div>
-                <div class="dist-name">Chamarajanagar</div>
-                <div class="dist-role">Gundlupete Taluk, Migrant Families</div>
-              </div>
-            </div>
-            <div class="district-card">
-              <div class="dist-icon"><i class="fa-solid fa-handshake"></i></div>
-              <div>
-                <div class="dist-name">Kalaburagi (Gulbarga)</div>
-                <div class="dist-role">TdH(G) Child Labour Prevention</div>
-              </div>
-            </div>
-            <div class="district-card">
-              <div class="dist-icon"><i class="fa-solid fa-network-wired"></i></div>
-              <div>
-                <div class="dist-name">Bidar District</div>
-                <div class="dist-role">Northern Karnataka Grassroots Action</div>
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-card); border-radius: var(--radius-md); border: 1px dashed var(--border-light); font-size: 0.88rem; color: var(--text-muted);">
-            <i class="fa-solid fa-circle-info" style="color: var(--primary);"></i> <strong>Extended Impact Reach:</strong> Raichur, Chitradurga, Davanagere, and Mandya covering 21 Gram Panchayats with 100+ villages.
-          </div>
-        </div>
-
-        <div class="map-visual-card">
-          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--primary-deep);">
-            <i class="fa-solid fa-map"></i> Karnataka State Operational Map
-          </h3>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Interactive view of RLHP Central Hub and District Project Offices</p>
-
-          <!-- Clean Scalable Vector Map of Karnataka Points -->
-          <svg class="karnataka-map-svg" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-            <!-- Karnataka schematic silhouette -->
-            <path d="M 229.8 26.3 L 234.5 29.3 L 231.4 34.5 L 238.1 37.6 L 240.9 34.6 L 247 36.5 L 244.5 41.5 L 246.6 49 L 243.3 51 L 250.2 56.4 L 241 67.3 L 244.3 70.8 L 237.1 74.4 L 236.4 81.5 L 252.5 86.9 L 241 91.5 L 241.7 95.7 L 237.2 95.1 L 237.4 101.3 L 232.6 104.9 L 231.3 108.7 L 237.9 112.4 L 240.3 118.6 L 235.4 137.4 L 238.1 139.9 L 234.9 140.9 L 238.5 142.2 L 238 146 L 233.3 147.2 L 234.9 150.3 L 231.7 152.5 L 223.2 153.5 L 230.2 159.2 L 246.3 162 L 246.3 165 L 239.5 167.6 L 240.9 188.9 L 219.7 187 L 209.4 194.7 L 212.1 195.2 L 211 201.6 L 216.1 205.8 L 209.9 207.5 L 209.7 216.1 L 206.1 216.7 L 212 227.6 L 218.6 231.7 L 215.8 234.1 L 218.6 238 L 213.1 248.5 L 193.4 243.8 L 192.7 250.4 L 199.3 252.5 L 198.2 261.1 L 193.8 262.7 L 192.5 274.6 L 199.6 282.8 L 206.3 282.2 L 204.2 287.3 L 200.4 287.9 L 204.3 297.8 L 214.2 299.6 L 217.8 291.3 L 226.2 291.7 L 226.1 295.3 L 231.2 295.7 L 232.8 300.7 L 234.9 299.4 L 232.9 292.1 L 240.3 296.3 L 240.4 303.4 L 233.2 302.4 L 230.5 305.1 L 233.6 306.4 L 229.1 311.6 L 235.9 315.6 L 233.7 320.9 L 230.5 319.8 L 228.3 311.5 L 217.5 313.7 L 215.8 310.4 L 209.5 309.7 L 209.3 302 L 201 302.8 L 206.4 308.9 L 203.5 311.7 L 210.3 317.9 L 206 325.1 L 207.5 329.8 L 218.8 329 L 216 322.9 L 219.4 318.5 L 219.6 322.2 L 223.1 319.9 L 224.2 323.5 L 235.4 323.8 L 238.8 334 L 241.7 333.3 L 241.6 329.7 L 248.2 330.8 L 250 327.6 L 253.8 330.4 L 254.1 326.7 L 261.5 322.1 L 260.9 317.3 L 266.9 319.8 L 271.3 316.5 L 269.1 324.8 L 275.3 320.5 L 280 323.4 L 277.9 336.7 L 282.7 335.9 L 284.5 341.8 L 297.9 340.4 L 296.4 357.1 L 306.3 361.3 L 308.6 358.4 L 310 360.9 L 307.6 365.7 L 309.5 367.7 L 301.9 375.8 L 302.3 380.2 L 300 379.8 L 302 387.3 L 295 382.5 L 292.3 387.7 L 288.2 387.7 L 286.9 393.8 L 275.7 388 L 272.8 391 L 269.3 387.6 L 267.8 389.9 L 267.8 385.7 L 261.4 386.9 L 255.3 399.5 L 246.2 400 L 245.2 412.2 L 248.4 411.6 L 248.1 416.1 L 244 423.3 L 238.4 425.5 L 238.1 429.4 L 255 431.7 L 257.7 435.7 L 251 446.4 L 239.3 446.9 L 235.1 458.6 L 223.6 455.3 L 214.6 457.8 L 215.1 461.1 L 208.3 455.2 L 201.5 456.5 L 197.5 470 L 179.5 467.7 L 175.9 462 L 169.9 464.2 L 169.7 458.4 L 165 459.9 L 155.2 451.3 L 150.3 452.1 L 150.3 444.4 L 143.2 447.4 L 134.7 446 L 130.4 437.9 L 121.5 436.6 L 109.9 424 L 105.8 424 L 105.9 418.8 L 102.3 416.2 L 105.5 410.4 L 100.7 413 L 96.3 407.6 L 99.9 404.6 L 96.6 402.9 L 93.1 406.1 L 88.4 398.7 L 81.8 399.8 L 78 391.3 L 69.8 393.3 L 58.7 355.3 L 61.2 359.9 L 53.2 321.8 L 55 322.9 L 46.4 311.7 L 36.9 280.7 L 39.5 278.8 L 38 276 L 34 279.5 L 30.1 265.2 L 27.2 266.7 L 20 261.2 L 22.5 258.7 L 20.7 254.7 L 31.5 250.6 L 34.8 236.6 L 30.7 231.8 L 36.1 229.5 L 30.6 216.8 L 32.6 214.4 L 30.5 206.1 L 20.3 205.1 L 28.7 197.6 L 30.2 200.5 L 37.6 198.4 L 39.2 193.9 L 36.3 193.4 L 38.2 190.8 L 40.6 193.3 L 39.3 190.2 L 44.4 181.2 L 38 179.9 L 46.1 177.2 L 46.5 168.8 L 38.6 164.8 L 35.4 166.1 L 35.1 159.3 L 37.9 158.3 L 33.4 151.3 L 30.4 151.8 L 31.9 148.6 L 34.3 151.3 L 34.9 148.1 L 39.2 149.6 L 44.9 141 L 49.7 142.8 L 51.1 148.1 L 58.7 144.7 L 56.7 142.5 L 59.2 137.5 L 73.7 134 L 73 128.4 L 76.6 125.2 L 74.7 122.9 L 84.8 122.5 L 93.5 129.4 L 97.3 126.7 L 97.3 122 L 108.9 120.1 L 110.5 122.8 L 115.6 121.5 L 115.9 118.6 L 122.3 121.7 L 122.3 111.8 L 119.3 108.1 L 121.2 101.6 L 116.1 94.3 L 119.8 88.2 L 130.6 95.2 L 132 91.8 L 134.4 94.2 L 136 92.1 L 138.9 98.1 L 151.2 95.4 L 154.7 99.9 L 154.7 96.3 L 159.1 94.9 L 168 98.9 L 169.9 96.2 L 164.9 91.2 L 167.6 87.2 L 164.8 80.6 L 175 76.4 L 177.2 70 L 180.4 70 L 180.4 73.7 L 183.1 69.4 L 188 75.1 L 189.6 68.5 L 194.3 65.7 L 191.2 61 L 195.2 63 L 202.6 59.9 L 205 42.5 L 215 44.6 L 223.5 28 L 229.8 26.3 Z" fill="#e2f5e8" stroke="#15803d" stroke-width="2.5" stroke-dasharray="4 2" stroke-linejoin="round" />
-            
-            <!-- Bidar (Top North) -->
-            <g class="map-node">
-              <circle cx="250" cy="70" r="10" fill="#15803d" />
-              <circle cx="250" cy="70" r="18" fill="rgba(21, 128, 61, 0.25)" />
-              <text x="268" y="75" font-family="Outfit" font-size="13" font-weight="700" fill="#0f172a">Bidar</text>
-              <text x="268" y="90" font-family="Outfit" font-size="10" fill="#475569">Project Office</text>
-            </g>
-
-            <!-- Kalaburagi / Gulbarga -->
-            <g class="map-node">
-              <circle cx="230" cy="120" r="10" fill="#15803d" />
-              <circle cx="230" cy="120" r="18" fill="rgba(21, 128, 61, 0.25)" />
-              <text x="248" y="125" font-family="Outfit" font-size="13" font-weight="700" fill="#0f172a">Kalaburagi</text>
-              <text x="248" y="140" font-family="Outfit" font-size="10" fill="#475569">TdH Child Labour Project</text>
-            </g>
-
-            <!-- Raichur & Central Extension -->
-            <g class="map-node">
-              <circle cx="220" cy="175" r="7" fill="#eab308" />
-              <text x="235" y="180" font-family="Outfit" font-size="11" font-weight="600" fill="#475569">Raichur / Davanagere</text>
-            </g>
-
-            <!-- Mysuru (Head Office - Highlighted) -->
-            <g class="map-node">
-              <circle cx="170" cy="410" r="14" fill="#0e5a26" stroke="#fef08a" stroke-width="3" />
-              <circle cx="170" cy="410" r="26" fill="rgba(14, 90, 38, 0.3)" />
-              <text x="60" y="405" font-family="Outfit" font-size="14" font-weight="800" fill="#0e5a26">MYSURU (HQ)</text>
-              <text x="50" y="422" font-family="Outfit" font-size="10" font-weight="600" fill="#15803d">Central Office & Shelters</text>
-            </g>
-
-            <!-- Chamarajanagar & Gundlupete -->
-            <g class="map-node">
-              <circle cx="185" cy="450" r="10" fill="#15803d" />
-              <circle cx="185" cy="450" r="18" fill="rgba(21, 128, 61, 0.25)" />
-              <text x="205" y="455" font-family="Outfit" font-size="13" font-weight="700" fill="#0f172a">Chamarajanagar</text>
-              <text x="205" y="470" font-family="Outfit" font-size="10" fill="#475569">Gundlupete (APPI)</text>
-            </g>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
   <!-- Success Stories & Testimonials Section -->
   <section class="stories-section" id="stories">
     <div class="container">
@@ -885,100 +790,13 @@
             </div>
           </div>
 
-          <!-- Story 4: Sneha -->
-          <div class="story-card">
-            <div class="story-img-wrap">
-              <img src="images/gallery/ashabhavana_girls_learning.jpg" alt="Sneha" class="story-img">
-              <span class="story-category-tag"><i class="fa-solid fa-user-nurse"></i> Healthcare</span>
-            </div>
-            <div class="story-body">
-              <h4 class="story-title">Asha Bhavana Ward to Compassionate Registered Nurse</h4>
-              <p class="story-quote">“Arriving at Asha Bhavana at age 5 in 2009 after severe family crisis, RLHP supported my schooling and Nursing college education. I now serve society with healing hands.”</p>
-              <div class="story-author-meta">
-                <div>
-                  <div class="story-author-name">Sneha</div>
-                  <div class="story-author-loc">Registered Nurse, Karnataka</div>
-                </div>
-                <button class="btn-story-read" onclick="openStoryModal('sneha')">Read Journey</button>
-              </div>
-            </div>
           </div>
-
-          <!-- Story 5: Guna -->
-          <div class="story-card">
-            <div class="story-img-wrap">
-              <img src="images/gallery/youth_computer_training.jpg" alt="Guna" class="story-img">
-              <span class="story-category-tag"><i class="fa-solid fa-microchip"></i> IT Hardware</span>
-            </div>
-            <div class="story-body">
-              <h4 class="story-title">From Slum Adversity to Certified IT Hardware Technician</h4>
-              <p class="story-quote">“Born to sanitation workers, I faced bleak prospects until joining Asha Kirana. Scoring 501 in SSLC, I completed my Computer Hardware diploma and build a proud future.”</p>
-              <div class="story-author-meta">
-                <div>
-                  <div class="story-author-name">Guna</div>
-                  <div class="story-author-loc">Hardware Technician, Mysuru</div>
-                </div>
-                <button class="btn-story-read" onclick="openStoryModal('guna')">Read Journey</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Story 6: Shruti -->
-          <div class="story-card">
-            <div class="story-img-wrap">
-              <img src="images/gallery/maternal_health_awareness.jpg" alt="Shruti" class="story-img">
-              <span class="story-category-tag"><i class="fa-solid fa-baby"></i> Child Health</span>
-            </div>
-            <div class="story-body">
-              <h4 class="story-title">A Mother’s Joy in Her Child’s Miraculous Recovery</h4>
-              <p class="story-quote">“My 3-year-old child Manoj from Kumbrallimata was severely malnourished and weak. RLHP health animators enrolled him in Anganwadi, monitored nutrition, and brought him back to vibrant health.”</p>
-              <div class="story-author-meta">
-                <div>
-                  <div class="story-author-name">Shruti</div>
-                  <div class="story-author-loc">Mother, Kumbrallimata</div>
-                </div>
-                <button class="btn-story-read" onclick="openStoryModal('shruti')">Read Journey</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Story 7: Zoya Sulthana -->
-          <div class="story-card">
-            <div class="story-img-wrap">
-              <img src="images/gallery/nutrition_kit_distribution.jpg" alt="Zoya Sulthana" class="story-img">
-              <span class="story-category-tag"><i class="fa-solid fa-graduation-cap"></i> Higher Education</span>
-            </div>
-            <div class="story-body">
-              <h4 class="story-title">ChildFund Sponsorship Paving Path to University Degree</h4>
-              <p class="story-quote">“Supported by RLHP and ChildFund for 8 years, I completed Pre-University and now pursue my bachelor's degree while my mother thrives with tailoring micro-enterprise.”</p>
-              <div class="story-author-meta">
-                <div>
-                  <div class="story-author-name">Zoya Sulthana</div>
-                  <div class="story-author-loc">College Scholar, Mysuru</div>
-                </div>
-                <button class="btn-story-read" onclick="openStoryModal('zoya')">Read Journey</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Story 8: Neha Anjum -->
-          <div class="story-card">
-            <div class="story-img-wrap">
-              <img src="images/stories/neha_anjum.jpg" alt="Neha Anjum" class="story-img">
-              <span class="story-category-tag"><i class="fa-solid fa-award"></i> Academic Honor</span>
-            </div>
-            <div class="story-body">
-              <h4 class="story-title">M.Com with Distinction: Aspiring Bank Manager</h4>
-              <p class="story-quote">“Under the DFC scholarship assistance from ChildFund and RLHP, I completed M.Com with Distinction. I am now preparing for national banking competitive exams with deep gratitude.”</p>
-              <div class="story-author-meta">
-                <div>
-                  <div class="story-author-name">Neha Anjum</div>
-                  <div class="story-author-loc">Postgraduate Scholar, Mysuru</div>
-                </div>
-                <button class="btn-story-read" onclick="openStoryModal('neha')">Read Journey</button>
-              </div>
-            </div>
-          </div>
+        <!-- View More Button linking to separate page -->
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="more-success-stories.html" class="btn-newspaper-toggle" style="text-decoration: none;">
+            <span>View More</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </div>
 
@@ -2095,6 +1913,107 @@
     </div>
   </section>
 
+  <!-- Where We Work & Map Section -->
+  <section class="work-section" id="where-we-work">
+    <div class="container">
+      <div class="work-grid">
+        <div>
+          <div class="section-tag"><i class="fa-solid fa-map-location-dot"></i> Geographical Footprint</div>
+          <h2 class="section-title">Where We Work Across Karnataka</h2>
+          <p class="section-desc">
+            RLHP is actively operating in 4 primary districts with full project offices, and has reached across 8 districts in Southern and Northern Karnataka covering more than 2,15,000+ community members.
+          </p>
+
+          <div class="district-badges-grid">
+            <div class="district-card">
+              <div class="dist-icon"><i class="fa-solid fa-building-flag"></i></div>
+              <div>
+                <div class="dist-name">Mysuru District</div>
+                <div class="dist-role">Head Office, Shelters & Urban Slums</div>
+              </div>
+            </div>
+            <div class="district-card">
+              <div class="dist-icon"><i class="fa-solid fa-tree"></i></div>
+              <div>
+                <div class="dist-name">Chamarajanagar</div>
+                <div class="dist-role">Gundlupete Taluk, Migrant Families</div>
+              </div>
+            </div>
+            <div class="district-card">
+              <div class="dist-icon"><i class="fa-solid fa-handshake"></i></div>
+              <div>
+                <div class="dist-name">Kalaburagi (Gulbarga)</div>
+                <div class="dist-role">TdH(G) Child Labour Prevention</div>
+              </div>
+            </div>
+            <div class="district-card">
+              <div class="dist-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <div>
+                <div class="dist-name">Bidar District</div>
+                <div class="dist-role">Northern Karnataka Grassroots Action</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-card); border-radius: var(--radius-md); border: 1px dashed var(--border-light); font-size: 0.88rem; color: var(--text-muted);">
+            <i class="fa-solid fa-circle-info" style="color: var(--primary);"></i> <strong>Extended Impact Reach:</strong> Raichur, Chitradurga, Davanagere, and Mandya covering 21 Gram Panchayats with 100+ villages.
+          </div>
+        </div>
+
+        <div class="map-visual-card">
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--primary-deep);">
+            <i class="fa-solid fa-map"></i> Karnataka State Operational Map
+          </h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Interactive view of RLHP Central Hub and District Project Offices</p>
+
+          <!-- Clean Scalable Vector Map of Karnataka Points -->
+          <svg class="karnataka-map-svg" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+            <!-- Karnataka schematic silhouette -->
+            <path d="M 229.8 26.3 L 234.5 29.3 L 231.4 34.5 L 238.1 37.6 L 240.9 34.6 L 247 36.5 L 244.5 41.5 L 246.6 49 L 243.3 51 L 250.2 56.4 L 241 67.3 L 244.3 70.8 L 237.1 74.4 L 236.4 81.5 L 252.5 86.9 L 241 91.5 L 241.7 95.7 L 237.2 95.1 L 237.4 101.3 L 232.6 104.9 L 231.3 108.7 L 237.9 112.4 L 240.3 118.6 L 235.4 137.4 L 238.1 139.9 L 234.9 140.9 L 238.5 142.2 L 238 146 L 233.3 147.2 L 234.9 150.3 L 231.7 152.5 L 223.2 153.5 L 230.2 159.2 L 246.3 162 L 246.3 165 L 239.5 167.6 L 240.9 188.9 L 219.7 187 L 209.4 194.7 L 212.1 195.2 L 211 201.6 L 216.1 205.8 L 209.9 207.5 L 209.7 216.1 L 206.1 216.7 L 212 227.6 L 218.6 231.7 L 215.8 234.1 L 218.6 238 L 213.1 248.5 L 193.4 243.8 L 192.7 250.4 L 199.3 252.5 L 198.2 261.1 L 193.8 262.7 L 192.5 274.6 L 199.6 282.8 L 206.3 282.2 L 204.2 287.3 L 200.4 287.9 L 204.3 297.8 L 214.2 299.6 L 217.8 291.3 L 226.2 291.7 L 226.1 295.3 L 231.2 295.7 L 232.8 300.7 L 234.9 299.4 L 232.9 292.1 L 240.3 296.3 L 240.4 303.4 L 233.2 302.4 L 230.5 305.1 L 233.6 306.4 L 229.1 311.6 L 235.9 315.6 L 233.7 320.9 L 230.5 319.8 L 228.3 311.5 L 217.5 313.7 L 215.8 310.4 L 209.5 309.7 L 209.3 302 L 201 302.8 L 206.4 308.9 L 203.5 311.7 L 210.3 317.9 L 206 325.1 L 207.5 329.8 L 218.8 329 L 216 322.9 L 219.4 318.5 L 219.6 322.2 L 223.1 319.9 L 224.2 323.5 L 235.4 323.8 L 238.8 334 L 241.7 333.3 L 241.6 329.7 L 248.2 330.8 L 250 327.6 L 253.8 330.4 L 254.1 326.7 L 261.5 322.1 L 260.9 317.3 L 266.9 319.8 L 271.3 316.5 L 269.1 324.8 L 275.3 320.5 L 280 323.4 L 277.9 336.7 L 282.7 335.9 L 284.5 341.8 L 297.9 340.4 L 296.4 357.1 L 306.3 361.3 L 308.6 358.4 L 310 360.9 L 307.6 365.7 L 309.5 367.7 L 301.9 375.8 L 302.3 380.2 L 300 379.8 L 302 387.3 L 295 382.5 L 292.3 387.7 L 288.2 387.7 L 286.9 393.8 L 275.7 388 L 272.8 391 L 269.3 387.6 L 267.8 389.9 L 267.8 385.7 L 261.4 386.9 L 255.3 399.5 L 246.2 400 L 245.2 412.2 L 248.4 411.6 L 248.1 416.1 L 244 423.3 L 238.4 425.5 L 238.1 429.4 L 255 431.7 L 257.7 435.7 L 251 446.4 L 239.3 446.9 L 235.1 458.6 L 223.6 455.3 L 214.6 457.8 L 215.1 461.1 L 208.3 455.2 L 201.5 456.5 L 197.5 470 L 179.5 467.7 L 175.9 462 L 169.9 464.2 L 169.7 458.4 L 165 459.9 L 155.2 451.3 L 150.3 452.1 L 150.3 444.4 L 143.2 447.4 L 134.7 446 L 130.4 437.9 L 121.5 436.6 L 109.9 424 L 105.8 424 L 105.9 418.8 L 102.3 416.2 L 105.5 410.4 L 100.7 413 L 96.3 407.6 L 99.9 404.6 L 96.6 402.9 L 93.1 406.1 L 88.4 398.7 L 81.8 399.8 L 78 391.3 L 69.8 393.3 L 58.7 355.3 L 61.2 359.9 L 53.2 321.8 L 55 322.9 L 46.4 311.7 L 36.9 280.7 L 39.5 278.8 L 38 276 L 34 279.5 L 30.1 265.2 L 27.2 266.7 L 20 261.2 L 22.5 258.7 L 20.7 254.7 L 31.5 250.6 L 34.8 236.6 L 30.7 231.8 L 36.1 229.5 L 30.6 216.8 L 32.6 214.4 L 30.5 206.1 L 20.3 205.1 L 28.7 197.6 L 30.2 200.5 L 37.6 198.4 L 39.2 193.9 L 36.3 193.4 L 38.2 190.8 L 40.6 193.3 L 39.3 190.2 L 44.4 181.2 L 38 179.9 L 46.1 177.2 L 46.5 168.8 L 38.6 164.8 L 35.4 166.1 L 35.1 159.3 L 37.9 158.3 L 33.4 151.3 L 30.4 151.8 L 31.9 148.6 L 34.3 151.3 L 34.9 148.1 L 39.2 149.6 L 44.9 141 L 49.7 142.8 L 51.1 148.1 L 58.7 144.7 L 56.7 142.5 L 59.2 137.5 L 73.7 134 L 73 128.4 L 76.6 125.2 L 74.7 122.9 L 84.8 122.5 L 93.5 129.4 L 97.3 126.7 L 97.3 122 L 108.9 120.1 L 110.5 122.8 L 115.6 121.5 L 115.9 118.6 L 122.3 121.7 L 122.3 111.8 L 119.3 108.1 L 121.2 101.6 L 116.1 94.3 L 119.8 88.2 L 130.6 95.2 L 132 91.8 L 134.4 94.2 L 136 92.1 L 138.9 98.1 L 151.2 95.4 L 154.7 99.9 L 154.7 96.3 L 159.1 94.9 L 168 98.9 L 169.9 96.2 L 164.9 91.2 L 167.6 87.2 L 164.8 80.6 L 175 76.4 L 177.2 70 L 180.4 70 L 180.4 73.7 L 183.1 69.4 L 188 75.1 L 189.6 68.5 L 194.3 65.7 L 191.2 61 L 195.2 63 L 202.6 59.9 L 205 42.5 L 215 44.6 L 223.5 28 L 229.8 26.3 Z" fill="#e2f5e8" stroke="#15803d" stroke-width="2.5" stroke-dasharray="4 2" stroke-linejoin="round" />
+            
+            <!-- Bidar (Top North) -->
+            <g class="map-node">
+              <circle cx="250" cy="70" r="10" fill="#15803d" />
+              <circle cx="250" cy="70" r="18" fill="rgba(21, 128, 61, 0.25)" />
+              <text x="268" y="75" font-family="Outfit" font-size="13" font-weight="700" fill="#0f172a">Bidar</text>
+              <text x="268" y="90" font-family="Outfit" font-size="10" fill="#475569">Project Office</text>
+            </g>
+
+            <!-- Kalaburagi / Gulbarga -->
+            <g class="map-node">
+              <circle cx="230" cy="120" r="10" fill="#15803d" />
+              <circle cx="230" cy="120" r="18" fill="rgba(21, 128, 61, 0.25)" />
+              <text x="248" y="125" font-family="Outfit" font-size="13" font-weight="700" fill="#0f172a">Kalaburagi</text>
+              <text x="248" y="140" font-family="Outfit" font-size="10" fill="#475569">TdH Child Labour Project</text>
+            </g>
+
+            <!-- Raichur & Central Extension -->
+            <g class="map-node">
+              <circle cx="220" cy="175" r="7" fill="#eab308" />
+              <text x="235" y="180" font-family="Outfit" font-size="11" font-weight="600" fill="#475569">Raichur / Davanagere</text>
+            </g>
+
+            <!-- Mysuru (Head Office - Highlighted) -->
+            <g class="map-node">
+              <circle cx="170" cy="410" r="14" fill="#0e5a26" stroke="#fef08a" stroke-width="3" />
+              <circle cx="170" cy="410" r="26" fill="rgba(14, 90, 38, 0.3)" />
+              <text x="60" y="405" font-family="Outfit" font-size="14" font-weight="800" fill="#0e5a26">MYSURU (HQ)</text>
+              <text x="50" y="422" font-family="Outfit" font-size="10" font-weight="600" fill="#15803d">Central Office & Shelters</text>
+            </g>
+
+            <!-- Chamarajanagar & Gundlupete -->
+            <g class="map-node">
+              <circle cx="185" cy="450" r="10" fill="#15803d" />
+              <circle cx="185" cy="450" r="18" fill="rgba(21, 128, 61, 0.25)" />
+              <text x="205" y="455" font-family="Outfit" font-size="13" font-weight="700" fill="#0f172a">Chamarajanagar</text>
+              <text x="205" y="470" font-family="Outfit" font-size="10" fill="#475569">Gundlupete (APPI)</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact & Pledge Support Section -->
   <section class="contact-section" id="contact" style="background: var(--bg-alt);">
     <div class="container">
@@ -2793,6 +2712,28 @@
     }
 
     // Toggle Newspaper Clippings (View More / View Less)
+    
+    // Toggle Comprehensive Community Development (View More / View Less)
+    function toggleProgrammes() {
+      const grid = document.querySelector('.program-cards-grid');
+      const btnText = document.getElementById('toggleProgrammesText');
+      const btnIcon = document.getElementById('toggleProgrammesIcon');
+      if (!grid || !btnText) return;
+
+      const isExpanded = grid.classList.toggle('expanded');
+      if (isExpanded) {
+        btnText.textContent = 'View Less';
+        if (btnIcon) btnIcon.className = 'fa-solid fa-chevron-up';
+      } else {
+        btnText.textContent = 'View More';
+        if (btnIcon) btnIcon.className = 'fa-solid fa-chevron-down';
+        const section = document.getElementById('programmes');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+
     function toggleNewspaperClippings() {
       const grid = document.getElementById('newspaperGrid');
       const btnText = document.getElementById('toggleNewspaperText');
