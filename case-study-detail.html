@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Development Case Studies - Rural Literacy &amp; Health Programme (RLHP)</title>
+  <meta name="description" content="Detailed community development case studies from RLHP Mysore: infrastructure advocacy, women collective action, and cultural empowerment across Karnataka.">
+  <link rel="icon" type="image/jpeg" href="images/rlhp-logo.jpg">
+
+  <!-- Google Fonts & Font Awesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Case Study Detail Page Specific Styles */
+    .detail-hero {
+      background: linear-gradient(135deg, var(--primary-deep) 0%, var(--primary) 100%);
+      color: #ffffff;
+      padding: 4rem 0 3rem;
+      text-align: center;
+    }
+    .detail-hero .section-tag {
+      background: rgba(255,255,255,0.18);
+      color: #fff;
+      border-color: rgba(255,255,255,0.3);
+      margin: 0 auto 0.75rem;
+      display: inline-flex;
+    }
+    .detail-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0.5rem 0 0.75rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.25;
+    }
+    .detail-hero p {
+      color: rgba(255,255,255,0.88);
+      font-size: 1rem;
+      max-width: 620px;
+      margin: 0 auto 1.75rem;
+    }
+
+    .case-detail-section {
+      padding: 4rem 0 5rem;
+      background: var(--bg-alt);
+    }
+
+    .case-detail-card {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      margin-bottom: 3rem;
+      scroll-margin-top: 5rem;
+    }
+
+    .case-detail-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .case-detail-hero-img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .case-detail-body {
+      padding: 2rem 2.25rem 2.25rem;
+    }
+
+    .case-detail-category-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .case-detail-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--primary-soft);
+      color: var(--primary-deep);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+    }
+
+    .case-detail-loc {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .case-detail-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--primary-deep);
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+    }
+
+    .case-detail-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .case-detail-desc p + p {
+      margin-top: 0.9rem;
+    }
+
+    .case-detail-impact {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .impact-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--bg-alt);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 0.5rem 0.9rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary-deep);
+    }
+
+    .impact-chip i {
+      color: var(--primary);
+    }
+
+    .case-detail-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .case-detail-nav h2 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary-deep);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 700px) {
+      .detail-hero h1 { font-size: 1.6rem; }
+      .case-detail-hero-img { height: 200px; }
+      .case-detail-body { padding: 1.25rem 1.25rem 1.5rem; }
+      .case-detail-title { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner Section -->
+  <section class="detail-hero" id="case-detail-top">
+    <div class="container">
+      <div class="section-tag">
+        <i class="fa-solid fa-users-rays"></i> Community Development Case Studies
+      </div>
+      <h1>Field Stories of Change Across Karnataka</h1>
+      <p>Grassroots interventions where RLHP-supported communities transformed challenges into lasting victories.</p>
+      <div>
+        <a href="index.html#projects" class="btn-newspaper-toggle" style="background: #ffffff; color: var(--primary-deep); border-color: #ffffff; text-decoration: none;">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to Case Studies</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Detail Section -->
+  <section class="case-detail-section">
+    <div class="container">
+
+      <!-- Navigation Header -->
+      <div class="case-detail-nav">
+        <h2><i class="fa-solid fa-star" style="color: var(--accent-gold);"></i> All Case Studies</h2>
+        <a href="index.html#projects" class="btn-newspaper-toggle" style="text-decoration: none; padding: 0.65rem 1.6rem; font-size: 0.9rem;">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to Case Studies</span>
+        </a>
+      </div>
+
+      <!-- Case 1: CC Road in Kashiram Thanda -->
+      <div class="case-detail-card" id="kashiram">
+        <img src="images/gallery/gram_sabha_awareness.jpg" alt="Construction of a CC Road in Kashiram Thanda" class="case-detail-hero-img">
+        <div class="case-detail-body">
+          <div class="case-detail-category-row">
+            <span class="case-detail-tag"><i class="fa-solid fa-road"></i> Infrastructure Advocacy</span>
+            <span class="case-detail-loc"><i class="fa-solid fa-location-dot"></i> Kashiram Thanda, North Karnataka</span>
+          </div>
+          <h2 class="case-detail-title">Construction of a CC Road in Kashiram Thanda</h2>
+          <div class="case-detail-desc">
+            <p>For more than 30 years, over 50 households in the remote tribal hamlet of Kashiram Thanda had no motorable road connecting them to the outside world. During monsoon seasons, the entire community faced extreme isolation — unable to access markets, medical facilities, schools, or government services. Daily life was a constant struggle, especially for women, children, and the elderly.</p>
+            <p>Through RLHP's Mass Contact Programme (MCP) and structured civic training workshops, the community was empowered with knowledge about their constitutional rights to public infrastructure and entitlements under government schemes. Armed with this understanding, the villagers organized themselves and petitioned the Gram Panchayat with a formal written representation, subsequently escalating to the Taluk Administration.</p>
+            <p>Their persistent, peaceful advocacy yielded concrete results: the Taluk Administration sanctioned a ₹15 Lakh Cement Concrete (CC) road project connecting the hamlet to the main district road. The construction was completed within a year, permanently transforming village access. Children can now reliably attend school during rains, agricultural produce reaches markets, and medical emergencies no longer put lives at risk.</p>
+          </div>
+          <div class="case-detail-impact">
+            <div class="impact-chip"><i class="fa-solid fa-check-circle"></i> 50+ Families Connected</div>
+            <div class="impact-chip"><i class="fa-solid fa-indian-rupee-sign"></i> ₹15 Lakh Road Sanctioned</div>
+            <div class="impact-chip"><i class="fa-solid fa-graduation-cap"></i> School Attendance Improved</div>
+            <div class="impact-chip"><i class="fa-solid fa-hospital"></i> Medical Access Restored</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 2: Community Action Against Illegal Liquor Sales -->
+      <div class="case-detail-card" id="liquor">
+        <img src="images/gallery/shg_leadership_training.jpg" alt="Community Action Against Illegal Liquor Sales" class="case-detail-hero-img">
+        <div class="case-detail-body">
+          <div class="case-detail-category-row">
+            <span class="case-detail-tag"><i class="fa-solid fa-hand-fist"></i> Women Collective Action</span>
+            <span class="case-detail-loc"><i class="fa-solid fa-location-dot"></i> Mirzapur, Basavakalyana</span>
+          </div>
+          <h2 class="case-detail-title">Community Action Against Illegal Liquor Sales</h2>
+          <div class="case-detail-desc">
+            <p>In Mirzapur village of Basavakalyana Taluk, the widespread proliferation of unlicensed illicit liquor dens had become a severe threat to community wellbeing. Family income was being eroded as men spent earnings on alcohol, women and children faced increased domestic violence and neglect, and the social fabric of the community was rapidly deteriorating.</p>
+            <p>RLHP's Women Sangha Federation programme intervened by organizing intensive leadership workshops where local women learned about their legal rights, the processes for filing complaints with government authorities, and peaceful protest methods. The workshops created a sense of collective solidarity and purpose among women who had individually felt powerless against entrenched illegal operators.</p>
+            <p>Galvanized by their training and emboldened by collective strength, the women sangha federations launched a coordinated campaign. They conducted peaceful public pickets outside identified illicit outlets, drawing community attention and creating social pressure. Simultaneously, they filed formal written representations with the District Excise Department and the local Police Station, documenting specific violations.</p>
+            <p>The combined public pressure and official complaints resulted in enforcement action. Illicit liquor dens were shut down, operators were penalized, and village peace was restored. The case stands as a powerful example of how RLHP's sangha empowerment approach enables communities to drive systemic change from within.</p>
+          </div>
+          <div class="case-detail-impact">
+            <div class="impact-chip"><i class="fa-solid fa-shield-halved"></i> Illicit Outlets Closed</div>
+            <div class="impact-chip"><i class="fa-solid fa-users"></i> Women Sangha Mobilized</div>
+            <div class="impact-chip"><i class="fa-solid fa-heart"></i> Family Safety Restored</div>
+            <div class="impact-chip"><i class="fa-solid fa-balance-scale"></i> Legal Action Taken</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 3: Breaking Gender Barriers Through Folk Art -->
+      <div class="case-detail-card" id="folkart">
+        <img src="images/gallery/child_rights_conference.jpg" alt="Breaking Gender Barriers Through Folk Art" class="case-detail-hero-img">
+        <div class="case-detail-body">
+          <div class="case-detail-category-row">
+            <span class="case-detail-tag"><i class="fa-solid fa-masks-theater"></i> Cultural Empowerment</span>
+            <span class="case-detail-loc"><i class="fa-solid fa-location-dot"></i> Bannithalapura, Gundlupete</span>
+          </div>
+          <h2 class="case-detail-title">Breaking Gender Barriers Through Folk Art</h2>
+          <div class="case-detail-desc">
+            <p>In Bannithalapura village of Gundlupete Taluk, the traditional Kamsale folk dance — a centuries-old percussion-based art form from the Kuruba Gowda community — had been exclusively performed by men for generations. This cultural exclusion was deeply embedded in village tradition and social norms, with women and girls considered ineligible to participate or learn the form.</p>
+            <p>The RLHP-formed Kiran Bedi Kishori Group, a community adolescent girls' group focused on leadership and empowerment, identified this cultural barrier as symbolic of broader gender inequalities they faced in daily life. With RLHP's encouragement and support, the group decided to challenge this taboo directly by seeking formal training in Kamsale rhythm and dance.</p>
+            <p>The girls were mentored by experienced community Kamsale practitioners who, persuaded by community dialogue facilitated by RLHP, agreed to teach them. The Kishori Group trained rigorously, mastering the intricate percussive footwork and rhythmic patterns. Their progress was remarkable — within months they were performing with genuine skill and confidence.</p>
+            <p>The group then performed publicly at district-level cultural forums, earning applause and recognition from audiences who had never witnessed women performing Kamsale. Their performances generated widespread community discussion about gender roles in cultural traditions. The state government's cultural department took note, extending formal recognition to the group's pioneering achievement. The initiative has since inspired similar efforts in neighbouring villages.</p>
+          </div>
+          <div class="case-detail-impact">
+            <div class="impact-chip"><i class="fa-solid fa-ribbon"></i> State Recognition Received</div>
+            <div class="impact-chip"><i class="fa-solid fa-star"></i> District Cultural Forum Award</div>
+            <div class="impact-chip"><i class="fa-solid fa-person-dress"></i> Gender Taboo Challenged</div>
+            <div class="impact-chip"><i class="fa-solid fa-music"></i> Kamsale Heritage Preserved</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Navigation -->
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="index.html#projects" class="btn-newspaper-toggle" style="text-decoration: none;">
+          <i class="fa-solid fa-arrow-left"></i> <span>Back to Case Studies</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="images/rlhp-logo.jpg" alt="RLHP Logo" class="footer-logo" style="width: 44px; height: 44px; border-radius: 50%; object-fit: contain;">
+            <span class="footer-brand-name">RLHP MYSORE</span>
+          </div>
+          <p class="footer-about">
+            Rural Literacy &amp; Health Programme (RLHP) is a non-profit registered under the Karnataka Societies Registration Act 1960. Standing alongside urban slum dwellers, rural smallholders, and street-involved children for over four decades.
+          </p>
+          <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#about">About RLHP</a></li>
+            <li><a href="index.html#vision-mission">Vision &amp; Mission</a></li>
+            <li><a href="index.html#leadership">Leadership &amp; Board</a></li>
+            <li><a href="index.html#programmes">Core Programmes</a></li>
+            <li><a href="index.html#projects">Field Projects</a></li>
+            <li><a href="index.html#stories">Success Stories</a></li>
+            <li><a href="index.html#partners">Institutional Partners</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Statutory &amp; Governance</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#compliance">80G &amp; 12A Certification</a></li>
+            <li><a href="index.html#compliance">FCRA Compliance</a></li>
+            <li><a href="index.html#compliance">Annual Audit Reports</a></li>
+            <li><a href="index.html#where-we-work">Where We Work</a></li>
+            <li><a href="index.html#news-events">Press Clippings</a></li>
+            <li><a href="index.html#contact">Bank Account Details</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Central Desk</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>No. 343, 2nd Stage, Gayathripuram, Udayagiri Post, Mysuru - 570019, Karnataka, India.</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 0821 2454686</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>mysore@rlhp.org</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Mon - Sat: 9:30 AM - 5:30 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Rural Literacy &amp; Health Programme (RLHP). All rights reserved. | Reg No: 23/84-85 (24 May 1984).</p>
+        <p class="footer-motto">"Child Rights &amp; Dignity for All"</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script: scroll to correct case study based on URL hash -->
+  <script>
+    // Scroll to the correct case study card based on URL hash
+    function scrollToHash() {
+      const hash = window.location.hash;
+      if (hash) {
+        const target = document.querySelector(hash);
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 150);
+        }
+      }
+    }
+
+    window.addEventListener('load', scrollToHash);
+    window.addEventListener('hashchange', scrollToHash);
+  </script>
+</body>
+</html>

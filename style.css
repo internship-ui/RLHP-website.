@@ -1110,18 +1110,28 @@ section {
 
 /* Interactive SVG Map Card */
 .map-visual-card {
-  background: white;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 60%, #f8fafc 100%);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 1.75rem;
   border: 1px solid var(--border-light);
   box-shadow: var(--shadow-md);
   position: relative;
+  overflow: hidden;
+}
+
+.map-visual-card::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, rgba(21,128,61,0.08) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .karnataka-map-svg {
   width: 100%;
   height: auto;
-  max-height: 380px;
+  max-height: 480px;
 }
 
 .map-node {
@@ -1129,28 +1139,38 @@ section {
   transition: transform 0.2s ease;
 }
 
-.map-node:hover circle {
-  fill: var(--accent-gold);
-  transform: scale(1.2);
+.map-node:hover circle:first-child {
+  opacity: 0.5;
+  r: 20;
+}
+
+.map-node:hover circle:nth-child(2) {
+  transform: scale(1.15);
   transform-origin: center;
 }
 
 /* Awards & Accolades */
 .awards-timeline {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
   margin-top: 2rem;
+  width: 100%;
+  align-items: stretch;
 }
 
 .award-card {
   background: white;
-  padding: 1.75rem;
+  padding: 1.5rem 1.15rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-light);
   border-top: 4px solid var(--accent-amber);
   position: relative;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .award-card:hover {
@@ -1160,27 +1180,51 @@ section {
 
 .award-year-tag {
   display: inline-block;
+  align-self: flex-start;
   background: #fef3c7;
   color: #92400e;
   font-weight: 800;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   padding: 0.2rem 0.65rem;
   border-radius: var(--radius-full);
   margin-bottom: 0.75rem;
 }
 
 .award-title {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.35;
 }
 
 .award-body {
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
   line-height: 1.5;
 }
+
+@media (max-width: 1100px) {
+  .awards-timeline {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .awards-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .awards-timeline {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 
 /* Government Collaborations & Committees */
 .collab-grid {
@@ -2176,55 +2220,103 @@ footer {
   color: #ffffff;
 }
 
-/* Case Studies Grid */
+/* Case Study Vertical Card Grid */
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
 .case-study-card {
   background: #ffffff;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-light);
-  padding: 1.75rem;
   box-shadow: var(--shadow-sm);
-  margin-bottom: 1.5rem;
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 1.75rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .case-study-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: var(--primary);
 }
 
 .case-img {
   width: 100%;
-  height: 170px;
+  height: 185px;
   object-fit: cover;
-  border-radius: var(--radius-sm);
+  display: block;
+  flex-shrink: 0;
+}
+
+.case-body {
+  padding: 1.1rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .case-body h4 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 800;
   color: var(--primary-deep);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
+  line-height: 1.35;
 }
 
 .case-body p {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.55;
   margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .case-meta {
   display: flex;
-  gap: 1rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   font-weight: 600;
   color: var(--primary);
+  margin-bottom: 0.9rem;
+}
+
+.case-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.btn-case-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background 0.22s ease, transform 0.18s ease;
+}
+
+.btn-case-read:hover {
+  background: var(--primary-deep);
+  transform: translateX(2px);
 }
 
 /* Newspaper Clippings Section */
@@ -2601,7 +2693,13 @@ footer {
 
 /* Responsive Overrides */
 @media (max-width: 900px) {
-  .case-study-card {
+  .case-study-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .case-study-grid {
     grid-template-columns: 1fr;
   }
   .case-img {
